@@ -5,8 +5,6 @@
 #refer here about weather api: http://raspi.seesaa.net/article/415530289.html
 #Author: Gohdak
 #
-#Aho
-#
 
 
 
