@@ -4,6 +4,9 @@
 #see https://learn.adafruit.com/neopixels-on-raspberry-pi/software
 #refer here about weather api: http://raspi.seesaa.net/article/415530289.html
 #Author: Gohdak
+#
+#Edit check
+
 
 
 
@@ -52,7 +55,7 @@ def main():
 	strip.begin()
 
 	print 'Press Ctrl-C to quit'
-	
+
 	while True:
 		#get hour and minute
 		d = datetime.now()
@@ -137,7 +140,7 @@ def weather():
     	forecasts = obj['forecasts']
 
     	cast = forecasts[0]
-		
+
 		return cast['telop']
 	finally:
 		r.close()
