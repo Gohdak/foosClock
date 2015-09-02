@@ -76,7 +76,7 @@ def main():
 		weatherColor(weatherType)
 
 		#illuminate LED
-		illuminateLED(strip, Color(255, 255, 255))
+		illuminateLED(strip, Color(255, 255, 255), listLightPos)
 
 
 
