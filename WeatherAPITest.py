@@ -6,6 +6,15 @@
 import urllib2
 import json
 
+
+
+
+
+#main
+def main():
+
+
+
 #define function getting weather info as 'telop'
 def weather():
 	try:
@@ -24,3 +33,10 @@ def weather():
 		r.close()
 
 	return
+
+
+
+
+
+if __name__ == '__main__':
+	main()
