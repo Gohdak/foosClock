@@ -13,16 +13,17 @@
 import time
 
 
-from neopixel import (
-	begin,
-	getPixelColor,
-	getPixels,
-	numPixels,
-	setBrightness,
-	setPixelColor,
-	setPixelColorRGB,
-	show,
-	Color)
+from neopixel import *
+#from neopixel import (
+#	begin,
+#	getPixelColor,
+#	getPixels,
+#	numPixels,
+#	setBrightness,
+#	setPixelColor,
+#	setPixelColorRGB,
+#	show,
+#	Color)
 
 
 
