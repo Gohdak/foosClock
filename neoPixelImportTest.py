@@ -50,6 +50,13 @@ def main():
 
 	while True:
 		illuminateLED(strip, Color(255, 255, 255))
+		time.sleep(1)
+		illuminateLED(strip, Color(255, 0, 255))
+		time.sleep(1)
+		illuminateLED(strip, Color(0, 255, 0))
+		time.sleep(1)
+		illuminateLED(strip, Color(0, 0, 255))
+		time.sleep(1)
 
 
 
