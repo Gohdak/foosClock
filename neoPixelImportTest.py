@@ -9,7 +9,7 @@
 
 
 
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
 
@@ -67,6 +67,10 @@ def illuminateLED(strip, color, wait_ms=50):
 
 
 
+try:
+	if __name__ == '__main__':
+		main()
+except KeyboardInterrupt:
+	pass
 
-if __name__ == '__main__':
-	main()
+GPIO.cleanup()
