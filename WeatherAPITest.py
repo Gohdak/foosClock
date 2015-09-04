@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 #ref http://raspi.seesaa.net/article/415530289.html
 #Author Gohdak
+#
+#Requirement
+#pip install simple json
 
 import urllib2
 import json
@@ -12,6 +15,8 @@ import json
 
 #main
 def main():
+	string = weather()
+	print string
 
 
 
@@ -22,7 +27,7 @@ def weather():
 		json_url = 'http://weather.livedoor.com/forecast/webservice/json/v1' #API URL
 
 		r = urllib2.urlopen('%s?city=%s' % (json_url, city) )
-    	obj = json.loads( unicode(r.read()) )
+    	obj = json.load( unicode(r.read()) )
 
     	forecasts = obj['forecasts']
 
