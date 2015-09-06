@@ -19,16 +19,7 @@ import math
 import urllib2
 import json
 
-from neopixel import (
-	begin,
-	getPixelColor,
-	getPixels,
-	numPixels,
-	setBrightness,
-	setPixelColor,
-	setPixelColorRGB,
-	show,
-	Color)
+from neopixel import *
 
 
 
@@ -70,10 +61,10 @@ def main():
 		listLightPos.extend(listFig(m2))
 
 		#get weather info
-		weatherType = weather()
+		#weatherType = weather()
 
 		#convert weatherType into Color
-		weatherColor(weatherType)
+		#weatherColor(weatherType)
 
 		#illuminate LED
 		illuminateLED(strip, Color(255, 255, 255), listLightPos)
@@ -127,23 +118,23 @@ def listFig(figure):
 
 
 #define function getting weather info as 'telop'
-def weather():
-	try:
-		city = '2620400';	#Uji
-		json_url = 'http://weather.livedoor.com/forecast/webservice/json/v1' #API URL
-
-		r = urllib2.urlopen('%s?city=%s' % (json_url, city) )
-    	obj = json.loads( unicode(r.read()) )
-
-    	forecasts = obj['forecasts']
-
-    	cast = forecasts[0]
-
-		return cast['telop']
-	finally:
-		r.close()
-
-	return
+#def weather():
+#	try:
+#		city = '2620400';	#Uji
+#		json_url = 'http://weather.livedoor.com/forecast/webservice/json/v1' #API URL
+#
+#		r = urllib2.urlopen('%s?city=%s' % (json_url, city) )
+#    	obj = json.loads( unicode(r.read()) )
+#
+#    	forecasts = obj['forecasts']
+#
+#    	cast = forecasts[0]
+#
+#		return cast['telop']
+#	finally:
+#		r.close()
+#
+#	return
 
 
 
@@ -195,7 +186,7 @@ def weatherColor(type):
 
 
 #define function illuminating LED
-def illuminateLED(strip, color, listPos, wait_ms=50):
+def illuminateLED(strip, color, listPos, wait_ms=100):
 	if len(listPos) != strip.numPixels():
 		return
 

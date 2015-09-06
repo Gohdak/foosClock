@@ -23,7 +23,8 @@ def main():
 #define function getting weather info as 'telop'
 def weather():
 	try:
-		city = '2620400';	#Uji
+		#city = '2620400'	#Uji
+		city = '130010'		#Tokyo
 		json_url = 'http://weather.livedoor.com/forecast/webservice/json/v1' #API URL
 
 		r = urllib2.urlopen('%s?city=%s' % (json_url, city) )
