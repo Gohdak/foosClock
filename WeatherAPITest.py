@@ -12,6 +12,8 @@ import json
 
 #main
 def main():
+	telop = weather()
+	print telop
 
 
 
@@ -22,11 +24,11 @@ def weather():
 		json_url = 'http://weather.livedoor.com/forecast/webservice/json/v1' #API URL
 
 		r = urllib2.urlopen('%s?city=%s' % (json_url, city) )
-    	obj = json.loads( unicode(r.read()) )
+    		obj = json.load( unicode(r.read()) )
 
-    	forecasts = obj['forecasts']
+    		forecasts = obj['forecasts']
 
-    	cast = forecasts[0]
+    		cast = forecasts[0]
 
 		return cast['telop']
 	finally:
