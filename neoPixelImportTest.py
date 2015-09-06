@@ -9,7 +9,7 @@
 
 
 
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 
 
@@ -49,9 +49,17 @@ def main():
 	print 'Press Ctrl-C to quit'
 
 	while True:
+<<<<<<< HEAD
 		illuminateLED(strip, Color(0, 255, 0))
 		time.sleep(1)
 		illuminateLED(strip, Color(255, 0, 0))
+=======
+		illuminateLED(strip, Color(255, 255, 255))
+		time.sleep(1)
+		illuminateLED(strip, Color(255, 0, 255))
+		time.sleep(1)
+		illuminateLED(strip, Color(0, 255, 0))
+>>>>>>> cfa22e2ad2f05af644d96202849d8e9941d683e2
 		time.sleep(1)
 		illuminateLED(strip, Color(0, 0, 255))
 		time.sleep(1)
@@ -72,6 +80,10 @@ def illuminateLED(strip, color, wait_ms=50):
 
 
 
+try:
+	if __name__ == '__main__':
+		main()
+except KeyboardInterrupt:
+	pass
 
-if __name__ == '__main__':
-	main()
+GPIO.cleanup()
