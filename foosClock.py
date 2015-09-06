@@ -53,7 +53,6 @@ def main():
 		m1 = int(d.minute/10)
 		m2 = d.minute%10
 		#convert each figures into binary position data
-		print 'h1 =' h1
 		listLightPos = []
 		listLightPos = listFig(h1)
 		listLightPos.extend(listFig(h2))
@@ -61,6 +60,7 @@ def main():
 		listLightPos.extend(listFig(m1))
 		listLightPos.extend(listFig(m2))
 
+		print listLightPos
 		#get weather info
 		#weatherType = weather()
 
