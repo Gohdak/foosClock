@@ -60,7 +60,6 @@ def main():
 		listLightPos.extend(listFig(m1))
 		listLightPos.extend(listFig(m2))
 
-		print listLightPos
 		#get weather info
 		#weatherType = weather()
 
@@ -188,12 +187,12 @@ def weatherColor(type):
 
 #define function illuminating LED
 def illuminateLED(strip, color, listPos, wait_ms=1000):
-	if len(listPos) != strip.numPixels():
-		return
+#	if len(listPos) != strip.numPixels():
+#		return
 
 	for i in range(strip.numPixels()):
 		#case dark position
-		if i * listPos[i - 1] == 0:
+		if listPos[i] == 0:
 			strip.setPixelColor(i, Color(0, 0, 0))
 			continue
 		#case bright position
@@ -201,7 +200,7 @@ def illuminateLED(strip, color, listPos, wait_ms=1000):
 			strip.setPixelColor(i, color)
 
 	strip.show()
-	time.sleep(wait_ms/1000.0)
+	time.sleep(wait_ms/100.0)
 
 
 
