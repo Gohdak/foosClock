@@ -53,13 +53,6 @@ def main():
 		m1 = int(d.minute/10)
 		m2 = d.minute%10
 		#convert each figures into binary position data
-<<<<<<< HEAD
-		print h1
-		print h2
-		print m1
-		print m2
-=======
->>>>>>> 4a62a7bd3efebd73dfa63e2731c46916d24dfbea
 		listLightPos = []
 		listLightPos = listFig(h1)
 		listLightPos.extend(listFig(h2))
