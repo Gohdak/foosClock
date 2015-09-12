@@ -192,7 +192,7 @@ def illuminateLED(strip, color, listPos, wait_ms=1000):
 
 	for i in range(strip.numPixels()):
 		#case dark position
-		if listPos[i] == -1:
+		if listPos[i] == 0:
 			strip.setPixelColor(i, Color(0, 0, 0))
 			continue
 		#case bright position
