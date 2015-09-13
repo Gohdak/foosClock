@@ -212,4 +212,3 @@ try:
 		main()
 except KeyboardInterrupt:
 	pass
-GPIO.cleanup()
