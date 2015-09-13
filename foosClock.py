@@ -67,6 +67,7 @@ def main():
 		#weatherColor(weatherType)
 
 		#illuminate LED
+		#Color order = R B G
 		illuminateLED(strip, Color(0, 0, 255), listLightPos)
 
 
@@ -141,6 +142,7 @@ def listFig(figure):
 
 
 #define function converting weather into color
+#Color order = R B G
 def weatherColor(type):
 	if type == u'曇時々晴':
 		return Color(255, 255, 255)
@@ -200,7 +202,7 @@ def illuminateLED(strip, color, listPos, wait_ms=1000):
 			strip.setPixelColor(i, color)
 
 	strip.show()
-	time.sleep(wait_ms/100.0)
+	time.sleep(wait_ms/1000.0)
 
 
 
